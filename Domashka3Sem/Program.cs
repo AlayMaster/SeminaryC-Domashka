@@ -18,7 +18,6 @@ Cube(n);
 
 void Palindrom(int num)
 {
-    
     if(num >= 10000 && num < 100000)
     {
         int a = num / 10000;
