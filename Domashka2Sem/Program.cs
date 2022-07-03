@@ -26,25 +26,21 @@ Week(num);
 
 //Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-int ThirdNumber()
+void ThirdNumber(int num)
 {
-    Console.WriteLine("Input number: ");
-    int num = Convert.ToInt32(Console.ReadLine());
     if (num < 100) Console.WriteLine("третьего числа нет");
-    if (num > 999 && num <=9999)
-        num = num / 10;
-        int res = num % 10;
-  /*   while (num>=9999)  // чет я голову ломал,так и не додумался как порядок понижать до этих трех цифр
+    if (num >= 100 && num <=999)
     {
-        int k=10;
-        num = num / 10*k;
-        int res2 = num % 10;
-        return res2;
+        int res = num % 10;
+        Console.WriteLine("Third number is: " + res);
     }
-    */
-     
-    return res; 
+   /* if(num >= 1000) // тут я не понимаю,как найти порядок именно этого числа,когда порядок увелиливается на одну цифру
+    {
+         num = num / 10;
+         int res = num % 10;
+         Console.WriteLine("Third number is: " + res);
+     }*/
 }
-
-int number = ThirdNumber();
-Console.WriteLine("Third number is: " + number);
+Console.WriteLine("Input number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+ThirdNumber(num);
