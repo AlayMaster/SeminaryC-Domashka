@@ -1,17 +1,17 @@
 ﻿//  Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 
+
+Console.WriteLine("input positive integer number: ");
+int m = Convert.ToInt32(Console.ReadLine());
+int[] count;
+count = new int[m];
+for (int i = 0; i < m; i++)
 {
-    Console.WriteLine("input positive integer number: ");
-    int m = Convert.ToInt32(Console.ReadLine());
-    int[] count;
-    count = new int[m];
-    for (int i = 0; i < m; i++)
-    {
-      count[i] = new Random().Next(0, 100);
-      Console.Write($"{count[i]} ");
-    }
-    Console.ReadLine();
+  count[i] = new Random().Next(0, 100);
+  Console.Write($"{count[i]} ");
 }
+Console.ReadLine();
+
 
 //Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
