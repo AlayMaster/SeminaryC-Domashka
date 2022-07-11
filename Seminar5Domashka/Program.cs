@@ -29,17 +29,28 @@ void ShowArray(int[] array)
 
 //Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, 
 //которая покажет количество чётных чисел в массиве.
-
+/*
 int ChetNumbers(int[] array)
 {
     int count = 0;
     for( int i = 0; i < array.Length ;i++)
-    
-      if(array[i] % 2 == 0)  count++;  
-    
+        if(array[i] % 2 == 0)  count++;  
     return count;
-    
+
 }
+*/
+// Задайте одномерный массив, заполненный случайными числами.
+// Найдите сумму элементов, стоящих на нечётных позициях.
+
+int SumNechet(int[] array)
+{
+    int sum = 0;
+    for( int i = 1; i < array.Length +1 ;i++)
+        if(i % 2 == 0) sum = sum + array[i-1];
+    return sum;
+}   
+
+    
 
 Console.Write("Input size of array: ");
 int size = Convert.ToInt32(Console.ReadLine());
@@ -50,7 +61,8 @@ int max = Convert.ToInt32(Console.ReadLine());
 
 int[] array1 = CreateRandomArray(size, min, max);
 ShowArray(array1);
-Console.WriteLine($"Четных чисел: " + ChetNumbers(array1));
+//Console.WriteLine($"Четных чисел: " + ChetNumbers(array1));
+Console.WriteLine($"Сумма нечетных чисел равна: " + SumNechet(array1));
 
 
 
