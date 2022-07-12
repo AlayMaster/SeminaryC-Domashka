@@ -68,7 +68,7 @@ double [] CreateRandomArray(int size, double minValue, double maxValue)
 {
     double[] newArray = new double[size];
     for(int i =0; i< size; i++)
-        newArray[i] = new Random().NextDouble();
+        newArray[i] = new Random().Next(0,100) + new Random().NextDouble();
     return newArray;
 }
 void ShowArray(double[] array)
